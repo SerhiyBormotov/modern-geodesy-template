@@ -1,0 +1,113 @@
+//FOOTER
+footer{
+	position: relative;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	padding:10vh 0;
+	background-color: $dark;
+	color:white;
+	-webkit-box-align:center;
+	-webkit-align-items:center;
+	    -ms-flex-align:center;
+	        align-items:center;
+	-webkit-box-pack:center;
+	-webkit-justify-content:center;
+	    -ms-flex-pack:center;
+	        justify-content:center;
+	font-size: 14px; 
+	letter-spacing: 2px;
+	font-weight: 300;
+	-webkit-flex-wrap:wrap;
+	    -ms-flex-wrap:wrap;
+	        flex-wrap:wrap;
+	z-index: 10;
+	ul{
+		@extend %unlist;
+
+	}
+	.footer-block-1, .footer-block-2{
+		position: relative;
+		display:inline-block;
+		padding:20px;
+		height: 100%;	
+
+	}
+	.footer-block-1{
+		text-align: right;
+		-webkit-box-flex: 3;
+		-webkit-flex: 3 3 400px;
+		    -ms-flex: 3 3 400px;
+		        flex: 3 3 400px;
+	}
+	.footer-block-2{
+
+		-webkit-box-flex: 2;
+
+		-webkit-flex: 2 2 300px;
+
+		    -ms-flex: 2 2 300px;
+
+		        flex: 2 2 300px;
+				
+		ul{
+			text-transform: uppercase;
+			padding-left: 20px;
+			font-size: 17px;
+			li{
+				margin-bottom: 5px;
+			}
+		}
+
+	}
+	.footer-logo{
+		display: inline-block;
+		width:100%;
+		max-width: 380px;
+		margin-bottom: 40px;
+		position: relative;
+		@extend %image-wrapper;
+
+		&-line{
+			display: inline-block;
+			position: absolute;
+			right: 0;
+			bottom: -10px;
+			width:100vw;
+			height: 1px;
+			background-color: $prime;
+		}
+	}
+	.footer-contacts{
+		display: inline-block;
+		width:100%;
+		ul{
+			display: inline-block;
+			text-align: left;
+			padding-left: 80px;
+			max-width: 280px;
+
+			li{
+				position: relative;
+				padding-left: 10px;
+				margin-bottom: 10px;
+				display: inline-block;
+				&:nth-of-type(1){
+					font-size: 12px;
+				}
+				b{
+					display: inline-block;
+					position: absolute;
+					right:100%;
+					letter-spacing: 2px;
+					white-space:nowrap;
+					color:$prime;
+					font-size: 14px;
+
+				}
+
+			}
+		}
+	}
+}

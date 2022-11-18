@@ -1,0 +1,290 @@
+//BLOG
+.blog-title{
+	width:100%;
+	position: relative;
+	margin:0;
+	margin-bottom: 40px;
+	padding: 0;
+	padding-top: 30vw;
+	text-align: right;
+	@media all and (min-width: 768px) {
+		min-height: 30vh;
+		padding: 40px 0; 
+		padding-top: 25vh;
+	}
+	svg.blog-title-triangle-1{
+			display: inline-block;
+			position: absolute;
+			height: 300px;
+			width:20%;
+			top:80%;
+			left:0;
+			z-index: -2;
+		}
+	&-wrapper{
+		display: inline-block;
+		position: relative;
+		width:100%;		
+		background-color: white;		
+		text-align: left;
+		z-index: 20;
+		padding: 10px;
+		padding-left: 20px;
+		@media all and (min-width: 768px) {width:70vw; padding: 40px;}
+		h1{
+			font-size: 32px;
+			font-weight: bold;
+			margin:0;
+			position: relative;
+			letter-spacing: 5px;
+			margin-bottom: 10px;
+			@media all and (min-width: 768px) {width:65%;font-weight: bold;}			
+			z-index: 10;
+			&:before{
+				content: '';
+				position: absolute;
+				bottom: -5px;
+				left:0;
+				height: 1px;
+				width: 100vw;
+				background-color:black; 
+			}
+
+
+		}
+		svg.blog-title-poly{
+			display: none;
+			@media all and (min-width: 768px) {
+				display: inline-block;
+				position: absolute;
+				height: 120px;
+				width:120px;
+				top:-60px;
+				left:-80px;
+				z-index: -10;
+				path{fill:none;fill-rule:nonzero;stroke:#000000;stroke-width:0.7}
+			}
+		}
+		svg.blog-title-triangle{
+			display: inline-block;
+			position: absolute;
+			height: 300px;
+			width:30%;
+			bottom:-10px;
+			right:0;
+			z-index: -2;
+		}
+	}
+
+	&-text{
+		letter-spacing: 3px;
+		font-size: 14px;
+		max-width: 700px;
+
+	}
+
+	&-triangle-1{
+			display: inline-block;
+			position: absolute;
+			height: 200px;
+			width:20vw;
+			bottom:0;
+			left:0;
+			z-index: -2;
+		}
+
+	&:hover{
+		svg.blog-title-poly{
+			path {
+					-webkit-animation:poly-rotation 3s;
+					        animation:poly-rotation 3s;
+					&:nth-of-type(1){-webkit-animation-delay:0s;animation-delay:0s}
+					&:nth-of-type(2){-webkit-animation-delay:0.2s;animation-delay:0.2s}
+					&:nth-of-type(3){-webkit-animation-delay:0.4s;animation-delay:0.4s}
+
+					}
+		}
+	}
+}
+
+.blog{
+	min-height: 100vh;
+
+	&-item{
+		margin:80px 0;
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		position: relative;
+		min-height: 250px;
+		-webkit-flex-wrap:wrap;
+		    -ms-flex-wrap:wrap;
+		        flex-wrap:wrap;
+		@media all and (min-width: 768px){
+			-webkit-flex-wrap:nowrap;
+			    -ms-flex-wrap:nowrap;
+			        flex-wrap:nowrap;
+			-webkit-box-shadow: 18px 0px 15px -18px rgba(0,0,0,0.3);
+			        box-shadow: 18px 0px 15px -18px rgba(0,0,0,0.3);
+			-webkit-transition:-webkit-box-shadow 0.3s ease;
+			transition:-webkit-box-shadow 0.3s ease;
+			-o-transition:box-shadow 0.3s ease;
+			transition:box-shadow 0.3s ease;
+			transition:box-shadow 0.3s ease, -webkit-box-shadow 0.3s ease;
+			&:hover{-webkit-box-shadow: 10px 0px 20px 0px rgba(0,0,0,0.3);box-shadow: 10px 0px 20px 0px rgba(0,0,0,0.3);}
+		}
+		
+		&-image{
+			-webkit-box-flex:2;
+			-webkit-flex:2 2 100%;
+			    -ms-flex:2 2 100%;
+			        flex:2 2 100%;
+			min-width: 200px;
+			position: relative;
+			min-height: 200px;
+				
+		}
+		&-block{
+			-webkit-box-flex:1;
+			-webkit-flex:1 1 100%;
+			    -ms-flex:1 1 100%;
+			        flex:1 1 100%;
+			display: -webkit-box;
+			display: -webkit-flex;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-orient:vertical;
+			-webkit-box-direction:normal;
+			-webkit-flex-direction:column;
+			    -ms-flex-direction:column;
+			        flex-direction:column;
+			-webkit-box-pack:center;
+			-webkit-justify-content:center;
+			    -ms-flex-pack:center;
+			        justify-content:center;
+			padding: 0 10px;
+			@media all and (min-width: 768px){padding: 0 20px;}
+
+		}
+		
+		&-title{
+			position: relative;
+			text-transform: uppercase;
+			letter-spacing: 3px;
+			font-size: 20px;
+			margin-bottom: 20px;
+			margin-top: 30px;
+			&:before{
+				content: '';
+				position: absolute;
+				bottom: -10px;
+				width:25%;
+				height: 1px;
+				left:0;
+				background-color: #aaa;
+
+			}
+		}
+		&-text{
+			font-size: 15px;
+			text-align: justify;
+			margin-bottom: 10px;
+		}
+		
+		&-readmore{
+			text-align: right;
+			margin-bottom: 10px;
+			.button{
+				padding: 10px 15px;
+				font-size: 16px;
+				min-width: 25%;		
+			}
+		}
+
+		&-date{
+			position: absolute;
+			display: -webkit-box;
+			display: -webkit-flex;
+			display: -ms-flexbox;
+			display: flex;
+			width:50px;
+			padding: 10px;
+			height: 100px;
+			top:0;
+			right:0;
+			z-index: 10;
+			-webkit-box-orient: vertical;
+			-webkit-box-direction: normal;
+			-webkit-flex-direction: column;
+			    -ms-flex-direction: column;
+			        flex-direction: column;
+			-webkit-box-pack:end;
+			-webkit-justify-content:flex-end;
+			    -ms-flex-pack:end;
+			        justify-content:flex-end;
+			-webkit-box-align:center;
+			-webkit-align-items:center;
+			    -ms-flex-align:center;
+			        align-items:center;			
+			background-color: $prime;
+			@media all and (min-width: 768px){height: 50%;}
+
+			span{
+				display: block;
+				font-size: 25px;
+
+				margin: 0;
+				@media all and (min-width: 768px){
+					font-size: 30px;
+				font-weight: 400;}
+			}
+
+		}
+
+	}
+}
+
+/*PAGGINATION*/
+.pageNav{
+    margin:30px 0;
+    text-align:center;
+}
+.pageNav li{
+    list-style:none;
+    display:inline-block;
+    padding:0;
+    margin:5px;
+    color:black;
+    font-size:18px;
+    a:hover{
+    	color:$prime;
+    }
+}
+.pageNav li a.active{
+	display:inline-block;
+	-webkit-transform-origin:center center;
+	    -ms-transform-origin:center center;
+	        transform-origin:center center;
+	-webkit-transform:scale(1.2);
+	    -ms-transform:scale(1.2);
+	        transform:scale(1.2);
+	font-weight:bold;
+	
+}
+.pageNav li.control a{
+    display:inline-block;
+    padding:3px 10px;
+    border:1px solid black;
+    border-radius:0px;
+    text-align:center;
+    min-width:30px;
+    text-transform:uppercase;
+    -webkit-transition:background-color 0.3s ease-out;
+		-o-transition:background-color 0.3s ease-out;
+    transition:background-color 0.3s ease-out;
+}
+.pageNav li.control a:hover{
+    color:#fff;
+    background:rgba(0,0,0,0.7);
+}

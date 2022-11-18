@@ -1,0 +1,23 @@
+{
+  "name": "modern_geodesy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SerhiyBormotov/modern-geodesy-template.git"
+  },
+  "author": "Serhii Bormotov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SerhiyBormotov/modern-geodesy-template/issues"
+  },
+  "homepage": "https://github.com/SerhiyBormotov/modern-geodesy-template#readme",
+  "devDependencies": {
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.0"
+  }
+}

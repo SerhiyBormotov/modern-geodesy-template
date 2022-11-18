@@ -1,0 +1,263 @@
+//SERVICE-NAV
+.service-nav{
+
+	position: fixed;
+	
+	top:0;
+	left:0;
+	width:100vw;
+	height: 100%;
+	background-color: rgba(11, 47, 65,0.95);
+	
+	font-size: 14px;
+	font-weight: 300;
+	color:white;
+	text-align:center;
+	z-index: 850;
+	padding: 10px;
+	
+	
+	letter-spacing: 2px;
+	-webkit-transition:opacity 0.7s cubic-bezier(1,0,1,0), -webkit-clip-path 0.5s linear;
+	transition:opacity 0.7s cubic-bezier(1,0,1,0), -webkit-clip-path 0.5s linear;
+	-o-transition:clip-path 0.5s linear, opacity 0.7s cubic-bezier(1,0,1,0);
+	transition:clip-path 0.5s linear, opacity 0.7s cubic-bezier(1,0,1,0);
+	transition:clip-path 0.5s linear, opacity 0.7s cubic-bezier(1,0,1,0), -webkit-clip-path 0.5s linear;
+	pointer-events:none;
+	opacity: 0;
+	-webkit-clip-path: circle(0 at 0 0);
+	        clip-path: circle(0 at 0 0);
+	&-wrapper{
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		position: absolute;
+		top:0;
+		left:0;
+		height: 100%;
+		width:100%;
+		-webkit-box-pack:center;
+		-webkit-justify-content:center;
+		    -ms-flex-pack:center;
+		        justify-content:center;
+		-webkit-box-align:start;
+		-webkit-align-items:flex-start;
+		    -ms-flex-align:start;
+		        align-items:flex-start;
+		-webkit-flex-wrap:wrap;
+		    -ms-flex-wrap:wrap;
+		        flex-wrap:wrap;
+		overflow-y:auto;
+		padding-top: 20vh;
+	}
+	&.toggle{
+		-webkit-clip-path: circle(250vw at 0 0);
+		        clip-path: circle(250vw at 0 0);
+		opacity:1;
+		-webkit-transition:-webkit-clip-path 0.5s linear;
+		transition:-webkit-clip-path 0.5s linear;
+		-o-transition:clip-path 0.5s linear;
+		transition:clip-path 0.5s linear;
+		transition:clip-path 0.5s linear, -webkit-clip-path 0.5s linear;
+		pointer-events:auto;
+		&~header{
+			color:white !important;
+			border-color: rgba(255,255,255,0.5) !important;
+			background-color: $dark !important;
+
+			.header-phone{
+				border-color: white;
+			}
+			.header-logo{
+				.fil0{fill:#ffffff}
+				.str0{stroke:#ffffff}
+			}
+			.top-nav-button{
+				color:white;
+				.bar{
+					background-color: white;
+				}
+			}
+			.header-search-btn path{fill:#FFFFFF;}
+		}
+		&~main{
+			pointer-events:none;
+		}
+	}
+	@media all and (min-width: 768px) {&.toggle{-webkit-clip-path: circle(150vw at 0 0);clip-path: circle(150vw at 0 0)}}
+
+
+
+	&-x{
+		display: inline-block;
+		width:100%;
+		padding-left: 10vw;
+		position:relative;
+		text-align: left;
+		margin-bottom: 20px;
+		b{
+			display: inline-block;
+			position: relative;
+			bottom: 0;
+			font-size: 30px;
+			letter-spacing: 5px;
+			font-weight: 300;
+			text-transform: uppercase;
+			&:before{
+				content: '';
+				position: absolute;
+				width:100vw;
+				right: 0;
+				bottom: -5px;
+				height: 1px;
+				background-color: $prime;
+			}
+		}
+		div{
+			cursor:pointer;
+			position: absolute;
+			display: inline-block;
+			height: 40px;
+			width: 40px;
+			bottom:110%;
+			right:5vw;
+			span{
+				display: inline-block;
+				background-color: white;
+				position: absolute;
+				top:20px;
+				right:10px;
+				height: 3px;
+				width:40px;
+				-webkit-transition:background-color 0.1s ease-out;
+				-o-transition:background-color 0.1s ease-out;
+				transition:background-color 0.1s ease-out;
+				&:nth-of-type(1){-webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);transform:rotate(45deg)}
+				&:nth-of-type(2){-webkit-transform:rotate(-45deg);-ms-transform:rotate(-45deg);transform:rotate(-45deg)}		
+
+			}
+			&:hover{
+				span{background-color: $prime;}
+			}
+		}
+	}
+	&-block{
+		padding:20px;
+		max-width: 300px;
+		text-align: left;
+		&-title{
+			display: inline-block;
+			position: relative;
+			max-width: 300px;
+			text-transform: uppercase;
+			font-weight: bold;
+			font-size: 16px;
+			margin-bottom: 30px;
+			padding-left: 40px;
+			svg{
+				pointer-events:none;
+				display: inline-block;
+				position: absolute;
+				top:-20px;
+				left:-10px;
+				width:80px;
+				height: auto;
+				-webkit-transition:-webkit-transform 0.2s linear;
+				transition:-webkit-transform 0.2s linear;
+				-o-transition:transform 0.2s linear;
+				transition:transform 0.2s linear;
+				transition:transform 0.2s linear, -webkit-transform 0.2s linear;				
+				polygon{
+					fill:none;
+					
+					stroke-width:0.7;
+					stroke:#ffffff;
+					
+				}
+			}
+			}	
+		ul{
+		@extend %unlist;
+		padding-left: 25px;
+		li{
+			margin-bottom: 10px;
+			position: relative;
+			&:before{
+					position: absolute;
+					content: '';
+					left:-22px;
+					width:12px;
+					height: 12px;
+					top:4px;
+					-webkit-border-radius: 50%;
+					        border-radius: 50%;
+					background-color: $prime;
+					-webkit-transform:scale(1);
+					    -ms-transform:scale(1);
+					        transform:scale(1);
+					-webkit-transition:-webkit-transform 0.3s ease;
+					transition:-webkit-transform 0.3s ease;
+					-o-transition:transform 0.3s ease;
+					transition:transform 0.3s ease;
+					transition:transform 0.3s ease, -webkit-transform 0.3s ease;
+
+				}
+				
+				&:after{
+					position: absolute;
+					content: '';
+					left:-22px;
+					width:12px;
+					height: 12px;
+					top:4px;
+					border:1px solid $prime;
+					-webkit-border-radius: 50%;
+					        border-radius: 50%;
+					-webkit-animation: none;
+					        animation: none;
+					opacity:0;					
+				}
+			&:hover{
+
+				&:before{
+					-webkit-transform:scale(1.1) !important;
+					    -ms-transform:scale(1.1) !important;
+					        transform:scale(1.1) !important;
+				}
+				&:after{
+					-webkit-animation: pulse 2s infinite ease-out;
+					        animation: pulse 2s infinite ease-out;	
+				}
+				}
+
+			}				
+		}
+		&:hover {
+			li:before, li:after{
+					-webkit-transform:scale(0.7);
+					    -ms-transform:scale(0.7);
+					        transform:scale(0.7);
+				}
+			svg {
+				-webkit-transform:scale(1.2);
+				    -ms-transform:scale(1.2);
+				        transform:scale(1.2);
+				
+				
+				polygon{
+					-webkit-animation:poly-rotation 3s infinite;
+					        animation:poly-rotation 3s infinite;
+					&:nth-of-type(1){-webkit-animation-delay:0s;animation-delay:0s}
+					&:nth-of-type(2){-webkit-animation-delay:0.2s;animation-delay:0.2s}
+					&:nth-of-type(3){-webkit-animation-delay:0.4s;animation-delay:0.4s}
+
+					}
+				}
+			}
+		}
+	}
+
+
+
+	

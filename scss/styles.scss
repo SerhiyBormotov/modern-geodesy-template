@@ -1,0 +1,15 @@
+$prime: #FC3512;
+$orange:#FF951C;
+$blue: #30A2DB;
+$yellow: #FFBA19;
+$green: #A2C908;
+$dark: #0b2f41;
+$light: #7CD1FC;
+$second: #0066ff;
+$bg: #ffeecc;
+$font: 'Open Sans', sans-serif;
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap');
+
+@import "normalize", "home", "publ","poly","header","modal", "aside","footer","advantages","content","pricelist","contact","aboutus", "blog";
+
