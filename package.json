@@ -13,7 +13,7 @@
   "author": "Serhii Bormotov",
   "license": "MIT",
   "browserslist": [
-    "> 0.2%"
+    "> 1%"
   ],
   "bugs": {
     "url": "https://github.com/SerhiyBormotov/modern-geodesy-template/issues"

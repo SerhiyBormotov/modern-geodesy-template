@@ -1,4 +1,5 @@
 'use strict';
+import "core-js/stable";
 import aboutUs from './modules/aboutus';
 import polygons from './modules/polygons';
 import carousel from './modules/carousel';
